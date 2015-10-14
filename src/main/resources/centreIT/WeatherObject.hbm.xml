@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="centreIT.WeatherObject" table="Weather" catalog="test">
+        <id name="id" type="java.lang.Long">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+
+        <property name="city" type="java.lang.String">
+            <column name="CITY" length="30" not-null="true"/>
+        </property>
+
+        <property name="temperature" type="java.lang.Integer">
+            <column name="TEMPERATURE" not-null="true"/>
+        </property>
+
+        <property name="weatherType" type="java.lang.String">
+            <column name="WEATHER_TYPE" length="30" not-null="true"/>
+        </property>
+
+        <property name="pressure" type="java.lang.Integer">
+            <column name="PRESSURE" not-null="true"/>
+        </property>
+
+        <property name="humidity" type="java.lang.String">
+            <column name="HUMIDITY" length="5" not-null="true"/>
+        </property>
+
+        <property name="iconURL" type="java.lang.String">
+            <column name="ICON_URL" length="60" not-null="true"/>
+        </property>
+
+        <property name="uptime" type="java.lang.String">
+            <column name="UPTIME" length="60" not-null="true"/>
+        </property>
+
+        <property name="service" type="java.lang.String">
+            <column name="SERVICE" length="20" not-null="true"/>
+        </property>
+
+    </class>
+</hibernate-mapping>
