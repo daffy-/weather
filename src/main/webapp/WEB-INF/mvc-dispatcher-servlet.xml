@@ -13,6 +13,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <mvc:default-servlet-handler/>
     <mvc:annotation-driven />
     <mvc:resources location="/js/" mapping="/js/**" />
 
